@@ -1,5 +1,5 @@
 ﻿function ProRes(exportFolder) {
-    var exportPath = "\\\\srv-harmony24\\usadata000\\00_OUTPUTMOV\\MORTINA\\" + exportFolder + "\\"
+    var exportPath = "\\path\\to\\folder\\" + exportFolder + "\\"
         System.println("percorso impostato:" + exportPath);
     var Type = ["WRITE", "null"];
     var burninnode = "Top/Burn-In";
@@ -22,7 +22,7 @@
         System.println("Burn-in attivo, lo disattivo...");
         node.setEnable(burninnode, false);
     }
-
+    //imposta il codec a ProRes 4444 e aggiorna il percorso di esportazione
     if (exportFolder) {
         node.setTextAttr(path, "MOVIE_PATH", 1, exportPath + sceneName);
             System.println("Percorso di esportazione aggiornato a: " + exportPath + sceneName);
